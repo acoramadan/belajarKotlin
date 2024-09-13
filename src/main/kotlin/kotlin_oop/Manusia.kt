@@ -5,6 +5,9 @@ class Manusia {
     private var umur : Int? = null
     private var tempatTingal : String? = null
     private var jenisKelamin : String? = null
+    private var value : Any by DelegateClass()
+    var x : Any by DelegateClass()
+    var y : Any? = null
 
     fun getNama() : String {
         return nama ?: "";
@@ -39,4 +42,5 @@ class Manusia {
     }
 
 }
+
 
