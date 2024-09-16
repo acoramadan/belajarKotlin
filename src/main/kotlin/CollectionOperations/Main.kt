@@ -47,12 +47,32 @@ class Main {
         ketika saya memberikan argumen drop 3. maka outputnya akan mulai dari
         4, 5, 6
 
+        slice : mengambil nilai berdasarkan jarak
+        maksudnya dapat dilihat di println pertama dalam function test
+        saya menggunakan argumen dimulai dari 2 sampai 6
+        dan untuk hitungan elemennya itu dimulai dari 0
+        0,1,2,3,4...etc.
+        kita juga bisa menggunakan collection list.
 
+        Disctinct :
+        jika ada yang sama nilainya, maka akan disaring nilainya.
+        intinya disctinct merupakan sebuah fungsi untuk menyaring nilai duplikat!
     */
+
+    fun test() {
+        //slice
+        val doubleList : List<Int> = listOf(1,5,2,3)
+        val list : List<Int> = listOf(1,2,3,4,5,6,7,8,9,10)
+        println("slice mengugnakna argumen int : ${list.slice(2..6)}")
+        println("slice menggunakan argumen list : ${list.slice(doubleList)}")
+
+        // Di
+    }
 
 }
 
 fun main() {
+    val main = Main()
     val user = User("Gacor@student.umi.ac.id","13123","Hendrick")
     val idMap : Map<String, User> = mapOf(
         "id_12331" to user
@@ -64,7 +84,7 @@ fun main() {
         2 to 4,
         5 to 10
     )
-
+    main.test()
     println(listNumber.filter { it == 1 }) // output : 1,1
     println(mapNumber.keys.filter { it %2 == 0 }) // output : 2
     println(listNumber.filterNot { it % 2 == 0 }) // ouput  : 1,3,1,5
