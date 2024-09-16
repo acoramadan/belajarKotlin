@@ -66,7 +66,9 @@ class Main {
         println("slice mengugnakna argumen int : ${list.slice(2..6)}")
         println("slice menggunakan argumen list : ${list.slice(doubleList)}")
 
-        // Di
+        //Distinct
+        val distinctList : List<Char> = listOf('2','A','3','4','A','2')
+        println("Distinct : ${distinctList.distinct()}")
     }
 
 }
