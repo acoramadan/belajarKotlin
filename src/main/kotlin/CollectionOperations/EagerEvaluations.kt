@@ -4,6 +4,9 @@ data class User(val email : String, val password : String, val userName : String
 class Main {
 
     /*
+        EagerEvaluation :
+        dimana dia akang mengevaluasi seluruh item yang ada pada collection
+
         filter :
         seperti namanya dia akan memfilter sesuai dengan kondisi yang kita berikan
         jadi hanya yang cocok dengan kondisi kita saja yang akan di tampilkan
@@ -80,7 +83,6 @@ class Main {
         var chunked : List<String> = nama.chunked(2)
         println("Chunked : $chunked")
 
-        @DeprecatedSinceKotlin
         chunked = nama.chunked(2) {
             it.toString().toUpperCase()
         }
