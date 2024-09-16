@@ -57,6 +57,11 @@ class Main {
         Disctinct :
         jika ada yang sama nilainya, maka akan disaring nilainya.
         intinya disctinct merupakan sebuah fungsi untuk menyaring nilai duplikat!
+
+        Chunked :
+        sama seperti split(). CHunked bisa kita gunakan untuk memecah nilai String!
+        menjadi beberapa bagian dalam bentuk array. kalau Split kita mengugnakan regex sebagai
+        pemisahnya, nah untuk Chunked kita menggunakan jumlah index
     */
 
     fun test() {
@@ -69,6 +74,17 @@ class Main {
         //Distinct
         val distinctList : List<Char> = listOf('2','A','3','4','A','2')
         println("Distinct : ${distinctList.distinct()}")
+
+        // Chunked
+        val nama : String = "Mufli"
+        var chunked : List<String> = nama.chunked(2)
+        println("Chunked : $chunked")
+
+        @DeprecatedSinceKotlin
+        chunked = nama.chunked(2) {
+            it.toString().toUpperCase()
+        }
+        println("Chunked menggunakan uppercase : $chunked")
     }
 
 }
