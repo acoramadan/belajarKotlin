@@ -18,12 +18,22 @@ fun scopeFunctional() : String {
     }
     return  name.toString()
 }
+// typealias digunakan ketika kita memiliki beberapa function type yang sama
 typealias number = (Int,Int) -> Int
-
+val sum : (Int) -> Int = { value ->
+    value + value
+}
+val printResultSum : (Int,sum :(Int) -> Int) -> Unit = {value : Int, sum ->
+    println(sum(value))
+}
 fun main() {
+    val message = {message : String -> "$message kontol kalian semua"}
     val tambah : number = {number1,number2 ->
-        number1 + number2
+        print("Hasil kali : ")
+        number1 * number2
     }
+    printResultSum(10,sum)
+
     printPeserta("Ahmad Mufli",130202022) {nama,stambuk ->
         "Nama : $nama\nStambuk : $stambuk"
     }
@@ -31,4 +41,11 @@ fun main() {
         "nama : $nama\nStambuk : $stambuk"
     }
     println(tambah(10,10))
+    println(message("kontol puki"))
+
+    val listNumber : List<Int> = listOf(1,3,4,5,2,3)
+    // foreachIndexed dengan menggunakan lambda
+    listNumber.forEachIndexed {index, value ->
+        println("Nilai list dari index : $index adalah : $value")
+    }
 }
