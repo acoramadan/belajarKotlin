@@ -26,9 +26,15 @@ fun main() {
     val user : Mahasiswa = mahasiswa.apply {
         this.nama = "hello"
         someMethod(this.nama,this.stambuk){nama,stambuk ->
-            "nama : $nama, $"
+            "Nama : $nama, Stambuk $stambuk$"
         }
+    }
 
+    println("${user.stambuk} : ${user.nama}")
+
+    val list : List<Int> = listOf(1,3,3,2,1,4)
+    list.also{
+        print(it.size)
     }
 }
 data class Mahasiswa(var nama : String, var stambuk : String)

@@ -10,7 +10,17 @@ fun printPeserta(nama : String,stambuk : Int , name : (String,Int) -> String) {
     println("Nama Peserta : ")
     println(name(nama,stambuk))
 }
+//letLambda
+fun letLambda(pesan : String?){
+    pesan?.let {
+        println(pesan)
+        val len : Int = pesan.length
+        println("Panjang pesan $len")
 
+    } ?: run{
+        println("Pesan Kosong!")
+    }
+}
 fun scopeFunctional() : String {
     val name = StringBuilder()
 
@@ -51,6 +61,7 @@ fun main() {
         print("Hasil kali : ")
         number1 * number2
     }
+    letLambda("hehe")
     /*
         2 cara penulisan dalam menggunakan highorder function
         jika terdapat lambda pada akhir parameter kode, seperti yang anda lihat sum merupakan sebuah  lambda
