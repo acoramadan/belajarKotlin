@@ -7,8 +7,14 @@ fun main () {
     vehicle = motorCycle
     val carList  : List<Vehicle> = listOf(car(200),car(300))
     val vehicleList = carList
-}
-class Generic {
+
+    //covariant
+    val kandangKucing = Kandang(Cat())
+    val kandangBinatang = kandangKucing
+
+    //contravariant
+    val penjagaKandang = PenjagaKandang<Animal>()
+    val penjagaKucing = penjagaKandang
     var number : Double = 0.0
     var number2 : Double = 0.0
 
@@ -24,7 +30,18 @@ abstract class Vehicle (wheel : Int)
 class motorCycle(speed: Int) : Vehicle(2)
 class car(speed: Int) : Vehicle(4)
 
+open class Animal()
+class Cat() : Animal()
+class Kandang<out T : Animal>  (private val hewan : T){
+    fun dapatkanHewan() : T {
+        return hewan
+    }
+}
+class PenjagaKandang<in T : Animal> {
+    fun urusKandang(hewan : T) {
 
+    }
+}
 class tesGeneric<T> {
     var t : T? = null
 
