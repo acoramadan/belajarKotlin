@@ -10,6 +10,7 @@ fun faktorial(number : Int) : Int {
     }
    return number * faktorial(number - 1)
 }
+
 // tail recursion!
 tailrec fun faktorial(n : Int, result : Int = 1) : Int {
     val newResult = n * result
@@ -19,4 +20,7 @@ tailrec fun faktorial(n : Int, result : Int = 1) : Int {
     return faktorial(n - 1, newResult)
 }
 class Recursion {
+    val message = { name : String ->
+        "Hello $name"
+    }
 }
