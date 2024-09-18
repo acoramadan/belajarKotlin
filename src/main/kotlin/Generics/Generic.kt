@@ -42,14 +42,14 @@ class PenjagaKandang<in T : Animal> {
         
     }
 }
-class tesGeneric<T> {
-    var t : T? = null
-
-    fun getT() : T? {
-        return t
-    }
-
-    fun setT(t : T) {
-        this.t = t
-    }
-}
+//class tesGeneric<T> {
+//    var t : T? = null
+//
+//    fun getT() : T? {
+//        return t
+//    }
+//
+//    fun setT(t : T) {
+//        this.t = t
+//    }
+//}
