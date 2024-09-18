@@ -39,7 +39,7 @@ class Kandang<out T : Animal>  (private val hewan : T){
 }
 class PenjagaKandang<in T : Animal> {
     fun urusKandang(hewan : T) {
-
+        
     }
 }
 class tesGeneric<T> {
